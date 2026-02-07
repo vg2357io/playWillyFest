@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://d4ga2ayvjgp7x"]
+
+[ext_resource type="PackedScene" uid="uid://co8ba7fmgov0u" path="res://root/assets/models/willy_fest/launchModelScene.glb" id="1_68qp8"]
+
+[node name="launchModelScene" unique_id=1678551294 instance=ExtResource("1_68qp8")]

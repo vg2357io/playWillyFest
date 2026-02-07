@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Structure" load_steps=3 format=3 uid="uid://kr7mdnjmnt7a"]
+
+[ext_resource type="PackedScene" uid="uid://xd84oetme4p" path="res://root/packages/kenney_holiday_kit/models/rocks-medium.glb" id="1_rocks_medium"]
+[ext_resource type="Script" uid="uid://b4i7dfy6u3e8w" path="res://root/scripts/kenney_city_builder/structure.gd" id="2_structure"]
+
+
+[resource]
+script = ExtResource("2_structure")
+model  = ExtResource("1_rocks_medium")
+price  = 70

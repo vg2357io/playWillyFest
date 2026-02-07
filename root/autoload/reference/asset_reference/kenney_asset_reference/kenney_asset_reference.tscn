@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://icq0crlnc8sq"]
+
+[ext_resource type="Script" uid="uid://b5gm5xb5n2tlv" path="res://root/autoload/reference/asset_reference/kenney_asset_reference/kenney_asset_reference.gd" id="1_ti2mk"]
+
+[node name="KenneyAssetReference" type="Node"]
+script = ExtResource("1_ti2mk")

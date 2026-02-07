@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Structure" load_steps=3 format=3 uid="uid://db7evxfhfhiym"]
+
+[ext_resource type="PackedScene" uid="uid://dcl1bdw1ynx8d" path="res://root/packages/kenney_holiday_kit/models/sock-red-cane.glb" id="1_sock_red_cane"]
+[ext_resource type="Script" uid="uid://b4i7dfy6u3e8w" path="res://root/scripts/kenney_city_builder/structure.gd" id="2_structure"]
+
+
+[resource]
+script = ExtResource("2_structure")
+model  = ExtResource("1_sock_red_cane")
+price  = 70

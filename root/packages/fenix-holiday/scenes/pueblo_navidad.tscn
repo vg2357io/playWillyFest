@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://1t6bpb86h6ei"]
+
+[ext_resource type="PackedScene" uid="uid://cgcdwfk44le2r" path="res://root/packages/fenix-holiday/assets/models/casa_navidad.glb" id="1_ooax2"]
+
+[node name="CasaNavidad" type="Node3D"]
+
+[node name="casa_navidad" parent="." instance=ExtResource("1_ooax2")]

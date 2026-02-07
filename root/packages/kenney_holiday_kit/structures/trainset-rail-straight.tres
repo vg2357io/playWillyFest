@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Structure" load_steps=3 format=3 uid="uid://bsgxyii8vnulp"]
+
+[ext_resource type="PackedScene" uid="uid://bye432ljn2tw5" path="res://root/packages/kenney_holiday_kit/models/trainset-rail-straight.glb" id="1_trainset_rail_straight"]
+[ext_resource type="Script" uid="uid://b4i7dfy6u3e8w" path="res://root/scripts/kenney_city_builder/structure.gd" id="2_structure"]
+
+
+[resource]
+script = ExtResource("2_structure")
+model  = ExtResource("1_trainset_rail_straight")
+price  = 70

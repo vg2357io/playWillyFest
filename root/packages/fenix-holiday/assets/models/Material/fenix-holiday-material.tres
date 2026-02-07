@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cgrrb65xowpeu"]
+
+[ext_resource type="Texture2D" uid="uid://rouqapit5l25" path="res://root/packages/fenix-holiday/assets/models/Textures/fenix-holiday-texture.png" id="1_xba7r"]
+
+[resource]
+resource_name = "holidaykit-colormap(Clone)"
+albedo_texture = ExtResource("1_xba7r")
+metallic = 0.5
+texture_filter = 1

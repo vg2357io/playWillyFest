@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Structure" load_steps=3 format=3 uid="uid://c07yd7e1t3w14"]
+
+[ext_resource type="PackedScene" uid="uid://d0nnrx2y4px2v" path="res://root/assets/models/kenney_city_builder/building-garage.glb" id="1_gyclk"]
+[ext_resource type="Script" uid="uid://b4i7dfy6u3e8w" path="res://root/scripts/kenney_city_builder/structure.gd" id="2_jrinw"]
+
+[resource]
+script = ExtResource("2_jrinw")
+model = ExtResource("1_gyclk")
+price = 70

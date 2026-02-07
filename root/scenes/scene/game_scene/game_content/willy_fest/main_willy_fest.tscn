@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bh1demr2rycxi"]
+
+[ext_resource type="PackedScene" uid="uid://d4ga2ayvjgp7x" path="res://root/scenes/scene/game_scene/game_content/willy_fest/launch_model_scene.tscn" id="1_xdn78"]
+[ext_resource type="PackedScene" uid="uid://u3lvn4rckcjv" path="res://root/scenes/scene/game_scene/game_content/willy_fest/characters/Lira.tscn" id="2_xdn78"]
+[ext_resource type="PackedScene" uid="uid://btm4xpm0scoh4" path="res://root/scenes/scene/game_scene/game_content/willy_fest/characters/Human1.tscn" id="3_4l0ut"]
+[ext_resource type="PackedScene" uid="uid://cx1b06p2blkwg" path="res://root/scenes/scene/game_scene/game_content/willy_fest/characters/Human0.tscn" id="4_e6yo4"]
+
+[node name="MainWillyFest" type="Node3D" unique_id=2116560552]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=545514000]
+transform = Transform3D(0.6862628, 0.25876302, -0.6797684, 0, 0.9345776, 0.35575953, 0.7273537, -0.24414454, 0.64136577, -0.85306203, 1.5914588, 0.86265945)
+
+[node name="launchModelScene" parent="." unique_id=1678551294 instance=ExtResource("1_xdn78")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.040929794, 0, 0.27123642)
+
+[node name="NPCs" type="Node3D" parent="." unique_id=1194295750]
+
+[node name="Lira" parent="NPCs" unique_id=475063524 instance=ExtResource("2_xdn78")]
+transform = Transform3D(0.83, 0, 0, 0, 0.83, 0, 0, 0, 0.83, 1.0539368, 0.30663687, -0.31656694)
+
+[node name="Human1" parent="NPCs" unique_id=874734124 instance=ExtResource("3_4l0ut")]
+transform = Transform3D(-9.1793915e-09, 0, -0.21, 0, 0.21, 0, 0.21, 0, -9.1793915e-09, 2.253, 0.315, -0.138)
+
+[node name="Human0" parent="NPCs" unique_id=1162206167 instance=ExtResource("4_e6yo4")]
+transform = Transform3D(-9.1793915e-09, 0, -0.21, 0, 0.21, 0, 0.21, 0, -9.1793915e-09, 1.747072, 0.315, -1.3562328)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=820543320]
+transform = Transform3D(1, 0, 0, 0, 0.8770791, 0.48034593, 0, -0.48034593, 0.8770791, 0, 2.6700175, 1.6221583)
