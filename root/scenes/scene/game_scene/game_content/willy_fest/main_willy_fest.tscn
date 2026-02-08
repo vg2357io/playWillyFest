@@ -8,6 +8,7 @@
 [ext_resource type="VideoStream" uid="uid://b4o7l6lvvga38" path="res://root/assets/video/moneda.ogv" id="6_23h22"]
 [ext_resource type="VideoStream" uid="uid://bionufouo2uev" path="res://root/assets/video/toro.ogv" id="6_mymoq"]
 [ext_resource type="Script" uid="uid://dnguf16sjb200" path="res://root/scenes/scene/game_scene/game_content/willy_fest/areas_activations/area_3d_collectible_activation.gd" id="7_30t1m"]
+[ext_resource type="PackedScene" uid="uid://c456mqoqs0v3d" path="res://root/assets/models/spaceships/Paladin.fbx" id="9_612wr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e6yo4"]
 size = Vector3(17.448181, 0.7742615, 9.930481)
@@ -193,6 +194,9 @@ videoStreaming = NodePath("../../../SubViewportVideoToroHodl/Panel/VideoStreamPl
 [node name="CollisionShape3DToroHodl" type="CollisionShape3D" parent="VideosWillyFest/ToroHodl/Area3DToroHodl" unique_id=1563836202]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1953783, 0, -1.7699466)
 shape = SubResource("SphereShape3D_612wr")
+
+[node name="Paladin" parent="." unique_id=1447191305 instance=ExtResource("9_612wr")]
+transform = Transform3D(1.3113417e-08, 0.3, -2.6226832e-08, 0.3, -1.3113417e-08, 0, -1.1464113e-15, -2.6226834e-08, -0.29999998, -1.7392774, 1.526871, 0.3820387)
 
 [connection signal="body_entered" from="VideosWillyFest/WillyCoin/Area3DWillyCoin" to="VideosWillyFest/WillyCoin/Area3DWillyCoin" method="_on_body_entered"]
 [connection signal="body_exited" from="VideosWillyFest/WillyCoin/Area3DWillyCoin" to="VideosWillyFest/WillyCoin/Area3DWillyCoin" method="_on_body_exited"]
