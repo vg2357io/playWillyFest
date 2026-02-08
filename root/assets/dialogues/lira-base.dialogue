@@ -1,0 +1,9 @@
+~ start
+Lira: Hola comandante! Hoy es un día importante, sabré si podré volver a Nymerith. Desde que se abrió el portal nadie ha vuelto de las misiones en la luna.
+Lira: Tu viaje es corto, de ida y vuelta. ¿Quieres refrescar algunos mandos? Seré tu guía de navegación durante tu paseo por el espacio.
+- Si, recuérdame cómo funcionan los mandos de la nave.
+	Nathan: You picked the first one.
+- No, gracias.
+	Lira: Claro, sin problema. Ya puedes subir a la nave.
+Lira: Ir a la luna te vuelve más fuerte, aunque el camino sea largo.
+=> END

@@ -1,0 +1,13 @@
+LiraDialogicCharacter: ¡Hola comandante! Seré su navegante desde la Tierra.
+LiraDialogicCharacter: Hoy es su gran día. Espero pueda descubrir qué pasa con el portal que se abrió en la luna. Yo vengo de allí, de Nymerith... Nada, da igual, usted piense solo en su misión.
+LiraDialogicCharacter: ¿Quiere que le refresque los mandos de la nave Paladín?
+- Claro, nunca viene mal recordar los fundamentos.
+	LiraDialogicCharacter: La nave tiene 4 propulsores que pueden empujar en todas direcciones\:\
+	"W"\: hacia delante; "S"\: hacia atrás;\
+	 "D"\: hacia abajo; "A"\: hacia arriba
+	LiraDialogicCharacter: Puede encender los propulsores que quiera. Por ejemplo puede ir hacia delante "W" y si enciende arriba "A" y abajo "D" se dará un mayor impulso hacia delante, igual hacia atrás.
+	LiraDialogicCharacter: Recuerde revisar la velocidad, en m/s, en su navegador y la desviación de su trayectoria hacia el objetivo en la pantalla.
+- Tengo todo lo que se necesita, gracias Lira
+	LiraDialogicCharacter: Gracias a usted comandante.
+LiraDialogicCharacter: Le deseo una buena travesía. Le iré guiando hasta que se encuentre sano y salvo. ¡Ve con cuidado mi comandante!
+[end_timeline]

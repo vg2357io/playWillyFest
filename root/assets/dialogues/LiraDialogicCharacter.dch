@@ -1,0 +1,32 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0, 1, 0.6484375, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "DialogicStyle",
+"suffix": ""
+},
+&"default_portrait": "LiraPortrait",
+&"description": "",
+&"display_name": "Lira",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"LiraPortrait": {
+"export_overrides": {
+"image": "\"res://root/assets/image/game/characters/lira/LiraPortrait.jpg\""
+},
+"ignore_char_scale": false,
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 1.0
+}

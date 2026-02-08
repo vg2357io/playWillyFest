@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dj5hpdbjnkdjx"
+path="res://.godot/imported/lira-base.dialogue-91e0a022915dd2e484a246f029b5294b.tres"
+
+[deps]
+
+source_file="res://root/assets/dialogues/lira-base.dialogue"
+dest_files=["res://.godot/imported/lira-base.dialogue-91e0a022915dd2e484a246f029b5294b.tres"]
+
+[params]
+
+defaults=true

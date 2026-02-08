@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://bh1demr2rycxi"]
 
 [ext_resource type="PackedScene" uid="uid://d4ga2ayvjgp7x" path="res://root/scenes/scene/game_scene/game_content/willy_fest/launch_model_scene.tscn" id="1_xdn78"]
+[ext_resource type="Script" uid="uid://dt0nui6lg787y" path="res://root/scenes/scene/game_scene/game_content/willy_fest/areas_activations/npc_dialogue_detection.gd" id="2_5q73n"]
 [ext_resource type="PackedScene" uid="uid://u3lvn4rckcjv" path="res://root/scenes/scene/game_scene/game_content/willy_fest/characters/Lira.tscn" id="2_xdn78"]
 [ext_resource type="PackedScene" uid="uid://btm4xpm0scoh4" path="res://root/scenes/scene/game_scene/game_content/willy_fest/characters/Human1.tscn" id="3_4l0ut"]
+[ext_resource type="Resource" uid="uid://mit7d7qnp633" path="res://root/assets/dialogues/LiraTutorial.dtl" id="3_5xluy"]
 [ext_resource type="PackedScene" uid="uid://cx1b06p2blkwg" path="res://root/scenes/scene/game_scene/game_content/willy_fest/characters/Human0.tscn" id="4_e6yo4"]
 [ext_resource type="PackedScene" uid="uid://w1kxftu64gc" path="res://root/scenes/scene/game_scene/game_content/willy_fest/characters/Player.tscn" id="5_e6yo4"]
 [ext_resource type="VideoStream" uid="uid://b4o7l6lvvga38" path="res://root/assets/video/moneda.ogv" id="6_23h22"]
 [ext_resource type="VideoStream" uid="uid://bionufouo2uev" path="res://root/assets/video/toro.ogv" id="6_mymoq"]
 [ext_resource type="Script" uid="uid://dnguf16sjb200" path="res://root/scenes/scene/game_scene/game_content/willy_fest/areas_activations/area_3d_collectible_activation.gd" id="7_30t1m"]
 [ext_resource type="PackedScene" uid="uid://c456mqoqs0v3d" path="res://root/assets/models/spaceships/Paladin.fbx" id="9_612wr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5xluy"]
+radius = 1.0502896
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e6yo4"]
 size = Vector3(17.448181, 0.7742615, 9.930481)
@@ -58,6 +63,16 @@ transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0.049541473, 0.73467
 speed = 2.0
 acceleration = 10.0
 camera_sens = 0.9
+
+[node name="NPCDialogues" type="Node3D" parent="." unique_id=412963509]
+
+[node name="DetectionLira" type="Area3D" parent="NPCDialogues" unique_id=1259197405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.054, 0.307, -0.317)
+script = ExtResource("2_5q73n")
+timeline_dialogue = ExtResource("3_5xluy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPCDialogues/DetectionLira" unique_id=1020282838]
+shape = SubResource("SphereShape3D_5xluy")
 
 [node name="NPCs" type="Node3D" parent="." unique_id=1194295750]
 
@@ -238,6 +253,8 @@ shape = SubResource("SphereShape3D_612wr")
 [node name="Paladin" parent="." unique_id=1447191305 instance=ExtResource("9_612wr")]
 transform = Transform3D(1.3113417e-08, 0.3, -2.6226832e-08, 0.3, -1.3113417e-08, 0, -1.1464113e-15, -2.6226834e-08, -0.29999998, -1.7392774, 1.526871, 0.3820387)
 
+[connection signal="body_entered" from="NPCDialogues/DetectionLira" to="NPCDialogues/DetectionLira" method="_on_body_entered"]
+[connection signal="body_exited" from="NPCDialogues/DetectionLira" to="NPCDialogues/DetectionLira" method="_on_body_exited"]
 [connection signal="body_entered" from="VideosWillyFest/WillyCoin/Area3DWillyCoin" to="VideosWillyFest/WillyCoin/Area3DWillyCoin" method="_on_body_entered"]
 [connection signal="body_exited" from="VideosWillyFest/WillyCoin/Area3DWillyCoin" to="VideosWillyFest/WillyCoin/Area3DWillyCoin" method="_on_body_exited"]
 [connection signal="body_entered" from="VideosWillyFest/ToroHodl/Area3DToroHodl" to="VideosWillyFest/ToroHodl/Area3DToroHodl" method="_on_body_entered"]
