@@ -45,6 +45,9 @@ radius = 1.6174865
 
 [node name="Player" parent="." unique_id=1462582750 instance=ExtResource("5_e6yo4")]
 transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0.049541473, 0.7346711, -1.3594441)
+speed = 2.0
+acceleration = 10.0
+camera_sens = 0.9
 
 [node name="NPCs" type="Node3D" parent="." unique_id=1194295750]
 
@@ -52,10 +55,10 @@ transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0.049541473, 0.73467
 transform = Transform3D(0.83, 0, 0, 0, 0.83, 0, 0, 0, 0.83, 1.0539368, 0.30663687, -0.31656694)
 
 [node name="Human1" parent="NPCs" unique_id=874734124 instance=ExtResource("3_4l0ut")]
-transform = Transform3D(-9.1793915e-09, 0, -0.21, 0, 0.21, 0, 0.21, 0, -9.1793915e-09, 2.253, 0.315, -0.138)
+transform = Transform3D(-7.86805e-09, 0, -0.18, 0, 0.18, 0, 0.18, 0, -7.86805e-09, 2.253, 0.315, -0.138)
 
 [node name="Human0" parent="NPCs" unique_id=1162206167 instance=ExtResource("4_e6yo4")]
-transform = Transform3D(-9.1793915e-09, 0, -0.21, 0, 0.21, 0, 0.21, 0, -9.1793915e-09, 1.747072, 0.315, -1.3562328)
+transform = Transform3D(-7.86805e-09, 0, -0.18, 0, 0.18, 0, 0.18, 0, -7.86805e-09, 1.747072, 0.315, -1.3562328)
 
 [node name="Area3D" type="StaticBody3D" parent="." unique_id=1423173291]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.040929794, 0, 0.27123642)
@@ -130,7 +133,7 @@ grow_vertical = 2
 stream = ExtResource("6_mymoq")
 expand = true
 loop = true
-bus = &"CollectionsMusic"
+bus = &"Video"
 
 [node name="SubViewportVideoWillyCoin" type="SubViewport" parent="." unique_id=2076660008]
 transparent_bg = true
@@ -156,7 +159,7 @@ grow_vertical = 2
 stream = ExtResource("6_23h22")
 expand = true
 loop = true
-bus = &"CollectionsMusic"
+bus = &"Video"
 
 [node name="VideosWillyFest" type="Node3D" parent="." unique_id=1559824088]
 
