@@ -16,6 +16,15 @@ size = Vector3(17.448181, 0.7742615, 9.930481)
 [sub_resource type="BoxShape3D" id="BoxShape3D_23h22"]
 size = Vector3(9.086426, 3.7510986, 0.9613037)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_612wr"]
+size = Vector3(2.8583984, 0.73924255, 3.0013885)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5q73n"]
+size = Vector3(1.562439, 1.1016846, 0.9845009)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5xluy"]
+size = Vector3(0.91015625, 1.0313721, 0.65774536)
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_23h22"]
 viewport_path = NodePath("SubViewportVideoWillyCoin")
 
@@ -91,6 +100,21 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 
 [node name="launchModelScene" parent="Area3D" unique_id=1678551294 instance=ExtResource("1_xdn78")]
 
+[node name="FloorShip1" type="CollisionShape3D" parent="Area3D" unique_id=124873907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0052025, 0.23775482, -0.00090551376)
+shape = SubResource("BoxShape3D_612wr")
+debug_color = Color(0.99607843, 0, 0.5686275, 1)
+
+[node name="FloorShip2" type="CollisionShape3D" parent="Area3D" unique_id=2112028072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28622437, 0.050842285, 1.0165997)
+shape = SubResource("BoxShape3D_5q73n")
+debug_color = Color(0.94509804, 0, 0.6039216, 1)
+
+[node name="StairsShip1" type="CollisionShape3D" parent="Area3D" unique_id=663901981]
+transform = Transform3D(1, 0, 0, 0, 0.8434946, 0.5371376, 0, -0.5371376, 0.8434946, -0.016, -0.012777593, 0.5123643)
+shape = SubResource("BoxShape3D_5xluy")
+debug_color = Color(0.9843137, 0.11372549, 0, 1)
+
 [node name="Lights" type="Node3D" parent="." unique_id=244494917]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=584958825]
@@ -111,6 +135,22 @@ distance_fade_enabled = true
 distance_fade_length = 1.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=676103009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4436688, 1.2971463, -0.446357)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights" unique_id=1500723008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5854447, 1.297, -0.4)
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lights" unique_id=577263450]
+transform = Transform3D(-0.70710677, 0.49999997, 0.49999997, 0, 0.70710677, -0.70710677, -0.70710677, -0.49999997, -0.49999997, -0.9741945, 0.6644677, -0.96677256)
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Lights" unique_id=1626584808]
+transform = Transform3D(0.70710677, 0.49999997, 0.49999997, 0, 0.70710677, -0.70710677, -0.70710677, 0.49999997, 0.49999997, -0.9741945, 0.6644677, 1.4255002)
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="Lights" unique_id=140403967]
+transform = Transform3D(-0.7071068, -0.49999994, -0.49999994, 0, 0.70710677, -0.70710677, 0.7071067, -0.5, -0.5, -2.7945085, 0.6644677, -0.96677256)
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Lights" unique_id=1660910830]
+transform = Transform3D(0.70710677, -0.49999997, -0.49999997, 0, 0.70710677, -0.70710677, 0.70710677, 0.49999997, 0.49999997, -2.9784112, 0.6644677, 1.4255002)
 
 [node name="SubViewportVideoToroHodl" type="SubViewport" parent="." unique_id=1431780230]
 
