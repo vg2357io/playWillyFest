@@ -188,6 +188,10 @@ height = 3.705498
 
 [node name="Player" type="CharacterBody3D" unique_id=1462582750]
 script = ExtResource("1_y0man")
+speed = 3.0
+acceleration = 30.0
+jump_height = 0.7
+camera_sens = 0.6
 metadata/_custom_type_script = "uid://djcley8kycgjs"
 
 [node name="Root" type="Node3D" parent="." unique_id=96037081]

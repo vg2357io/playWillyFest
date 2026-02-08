@@ -5,12 +5,41 @@
 [ext_resource type="PackedScene" uid="uid://btm4xpm0scoh4" path="res://root/scenes/scene/game_scene/game_content/willy_fest/characters/Human1.tscn" id="3_4l0ut"]
 [ext_resource type="PackedScene" uid="uid://cx1b06p2blkwg" path="res://root/scenes/scene/game_scene/game_content/willy_fest/characters/Human0.tscn" id="4_e6yo4"]
 [ext_resource type="PackedScene" uid="uid://w1kxftu64gc" path="res://root/scenes/scene/game_scene/game_content/willy_fest/characters/Player.tscn" id="5_e6yo4"]
+[ext_resource type="VideoStream" uid="uid://b4o7l6lvvga38" path="res://root/assets/video/moneda.ogv" id="6_23h22"]
+[ext_resource type="VideoStream" uid="uid://bionufouo2uev" path="res://root/assets/video/toro.ogv" id="6_mymoq"]
+[ext_resource type="Script" uid="uid://dnguf16sjb200" path="res://root/scenes/scene/game_scene/game_content/willy_fest/areas_activations/area_3d_collectible_activation.gd" id="7_30t1m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e6yo4"]
 size = Vector3(17.448181, 0.7742615, 9.930481)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_23h22"]
 size = Vector3(9.086426, 3.7510986, 0.9613037)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_23h22"]
+viewport_path = NodePath("SubViewportVideoWillyCoin")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30t1m"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_23h22")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_30t1m"]
+size = Vector2(0.3, 0.35)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mymoq"]
+radius = 1.4346691
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mymoq"]
+viewport_path = NodePath("SubViewportVideoToroHodl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mymoq"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_mymoq")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_612wr"]
+size = Vector2(0.3, 0.35)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_612wr"]
+radius = 1.6174865
 
 [node name="MainWillyFest" type="Node3D" unique_id=2116560552]
 
@@ -61,10 +90,15 @@ debug_color = Color(0, 0.6, 0.69803923, 1)
 [node name="Lights" type="Node3D" parent="." unique_id=244494917]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=584958825]
-transform = Transform3D(-1, 0, -8.7422784e-08, -8.008285e-08, 0.40108466, 0.916041, 3.5063934e-08, 0.916041, -0.40108466, 0.95469916, 1.2457318, -1.7026924)
+transform = Transform3D(-1, 3.552714e-15, -8.742277e-08, -6.219798e-08, 0.7027246, 0.7114621, 6.143412e-08, 0.7114621, -0.7027246, 0.95469916, 1.1066618, -1.8249699)
 light_energy = 0.5
+light_volumetric_fog_energy = 0.667
+light_size = 0.073
+light_specular = 16.0
 distance_fade_enabled = true
-distance_fade_length = 1.0
+distance_fade_begin = 4.0
+distance_fade_shadow = 10.0
+distance_fade_length = 0.0
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=558139095]
 transform = Transform3D(-4.371139e-08, -0.9163627, 0.40034905, 0, 0.40034905, 0.9163627, -1, 4.0055486e-08, -1.7499813e-08, 2.8165503, 1.1079841, -1.5225184)
@@ -73,3 +107,91 @@ distance_fade_enabled = true
 distance_fade_length = 1.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=676103009]
+
+[node name="SubViewportVideoToroHodl" type="SubViewport" parent="." unique_id=1431780230]
+
+[node name="Panel" type="Control" parent="SubViewportVideoToroHodl" unique_id=398793113]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VideoStreamPlayerToroHodl" type="VideoStreamPlayer" parent="SubViewportVideoToroHodl/Panel" unique_id=1144927503]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("6_mymoq")
+expand = true
+loop = true
+bus = &"CollectionsMusic"
+
+[node name="SubViewportVideoWillyCoin" type="SubViewport" parent="." unique_id=2076660008]
+transparent_bg = true
+size = Vector2i(800, 800)
+
+[node name="Panel" type="Control" parent="SubViewportVideoWillyCoin" unique_id=1882869054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VideoStreamPlayerWillyCoin" type="VideoStreamPlayer" parent="SubViewportVideoWillyCoin/Panel" unique_id=1334201486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("6_23h22")
+expand = true
+loop = true
+bus = &"CollectionsMusic"
+
+[node name="VideosWillyFest" type="Node3D" parent="." unique_id=1559824088]
+
+[node name="WillyCoin" type="Node3D" parent="VideosWillyFest" unique_id=1803375931]
+
+[node name="VideoWillyCoin" type="MeshInstance3D" parent="VideosWillyFest/WillyCoin" unique_id=238383540]
+transform = Transform3D(1, 0, 0, 0, -0.34202012, -0.9396926, 0, 0.9396926, -0.34202012, 0.9449564, 1.0156265, -1.7452445)
+material_override = SubResource("StandardMaterial3D_30t1m")
+mesh = SubResource("PlaneMesh_30t1m")
+skeleton = NodePath("../..")
+
+[node name="Area3DWillyCoin" type="Area3D" parent="VideosWillyFest/WillyCoin" unique_id=812136293 node_paths=PackedStringArray("videoStreaming")]
+script = ExtResource("7_30t1m")
+videoStreaming = NodePath("../../../SubViewportVideoWillyCoin/Panel/VideoStreamPlayerWillyCoin")
+
+[node name="CollisionShape3DWillyCoin" type="CollisionShape3D" parent="VideosWillyFest/WillyCoin/Area3DWillyCoin" unique_id=2046171434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.81077707, 0, -2.2813315)
+shape = SubResource("SphereShape3D_mymoq")
+
+[node name="ToroHodl" type="Node3D" parent="VideosWillyFest" unique_id=1742761484]
+
+[node name="VideoToroHodl" type="MeshInstance3D" parent="VideosWillyFest/ToroHodl" unique_id=1143236214]
+transform = Transform3D(-0.006998758, -0.9396697, 0.34201178, -8.881784e-16, -0.34202015, -0.93969274, 0.9999755, -0.00657668, 0.0023937155, 2.8485582, 0.91795886, -1.5276947)
+material_override = SubResource("StandardMaterial3D_mymoq")
+mesh = SubResource("PlaneMesh_612wr")
+
+[node name="Area3DToroHodl" type="Area3D" parent="VideosWillyFest/ToroHodl" unique_id=2050000982 node_paths=PackedStringArray("videoStreaming")]
+script = ExtResource("7_30t1m")
+videoStreaming = NodePath("../../../SubViewportVideoToroHodl/Panel/VideoStreamPlayerToroHodl")
+
+[node name="CollisionShape3DToroHodl" type="CollisionShape3D" parent="VideosWillyFest/ToroHodl/Area3DToroHodl" unique_id=1563836202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1953783, 0, -1.7699466)
+shape = SubResource("SphereShape3D_612wr")
+
+[connection signal="body_entered" from="VideosWillyFest/WillyCoin/Area3DWillyCoin" to="VideosWillyFest/WillyCoin/Area3DWillyCoin" method="_on_body_entered"]
+[connection signal="body_exited" from="VideosWillyFest/WillyCoin/Area3DWillyCoin" to="VideosWillyFest/WillyCoin/Area3DWillyCoin" method="_on_body_exited"]
+[connection signal="body_entered" from="VideosWillyFest/ToroHodl/Area3DToroHodl" to="VideosWillyFest/ToroHodl/Area3DToroHodl" method="_on_body_entered"]
+[connection signal="body_exited" from="VideosWillyFest/ToroHodl/Area3DToroHodl" to="VideosWillyFest/ToroHodl/Area3DToroHodl" method="_on_body_exited"]

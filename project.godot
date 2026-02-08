@@ -37,7 +37,7 @@ config/icon="res://root/assets/image/boot_splash/png/icon_1024_1024.png"
 
 [audio]
 
-buses/default_bus_layout="res://root/resources/global/audio_bus_layout/tres/audio_bus_layout.tres"
+buses/default_bus_layout="uid://b4i2pqmqdbjmm"
 manager/sound/bus="Sound"
 manager/sound/pool_1D_size=32
 manager/sound/pool_2D_size=32
